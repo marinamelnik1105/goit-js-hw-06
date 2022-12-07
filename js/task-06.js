@@ -9,10 +9,13 @@ function onInputBlur(event) {
 
     let currentValue = event.currentTarget.value.length
     
-    if (currentValue === Number(inputLength)) {
-        input.classList.add('valid')
-    } else {
-        input.classList.add('invalid')
+    if (currentValue !== Number(inputLength)) {
+        input.classList.add('invalid');
+      
+    }  else  {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+        
     }
-  
+
 }
